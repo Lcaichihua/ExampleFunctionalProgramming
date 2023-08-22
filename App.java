@@ -4,7 +4,6 @@ import java.time.Period;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 
@@ -38,8 +37,17 @@ public class App {
         //?
 
         /* */
+        Predicate pred= new Predicate<String>() {
 
-        App.printList(listaNombre);
+                @Override
+                public boolean test(String t) {
+                        // TODO Auto-generated method stub
+                return false    ;
+            }
+                
+        };
+        Predicate<String> asd =(String x) -> false;
+        //App.printList(listaNombre);
         // Lambda //method reference
         // list.forEach(System.out::println);
         /*for(int i = 0; i<persons.size(); i++){
