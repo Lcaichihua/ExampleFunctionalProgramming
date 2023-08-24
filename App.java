@@ -47,14 +47,30 @@ public class App {
                 
         };
         Predicate<String> asd =(String x) -> false;
-        //App.printList(listaNombre);
+        List<String> lost1 = Arrays.asList("XD","sadsd");
+        List<String> lost2 = new ArrayList<>(Arrays.asList("XD","sadsd"));
+        List<String> lost3 = List.of("xd");
+         List<String> lost4 = new ArrayList<>();
+         lost4.addAll(lost3);
+        
+        System.out.println(lost4);
+        lost4.add("sd");
+          System.out.println(lost4);
+
+
+          Predicate<Person> predicatePersonas = p -> p.getName().equals("Jaime");
+          List<Person> nuevaLista = persons.stream().filter(predicatePersonas).toList();
+       Map<String,String> xd = new HashMap<>();
+       xd.values();
+
+          //App.printList(listaNombre);
         // Lambda //method reference
         // list.forEach(System.out::println);
         /*for(int i = 0; i<persons.size(); i++){
                 System.out.println(persons.get(i));
 
         }*/
-        /*for(Person p : persons){
+        /*for(Person p : persons){             
                 System.out.println(p);
         }*/
         //persons.forEach(x -> System.out.println(x));
@@ -144,7 +160,10 @@ public class App {
         //System.out.println(sum.get());
 
 
+
+
     }
+   
 
     public static int getAge(LocalDate birthDate) {
         return Period.between(birthDate, LocalDate.now()).getYears();
