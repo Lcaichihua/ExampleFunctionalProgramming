@@ -1,6 +1,7 @@
 package InterfacesFuncionales;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     
@@ -19,7 +20,16 @@ public class Main {
         // MyFunctionalInterface demo = (String x) -> System.out.println("Hello ");
  
         List jedis=List.of( "Yoda", "windu","Anakin","Luke","Rey");
+         
         jedis.forEach(x -> System.out.println(x));
+        jedis.forEach(System.out::println);
+
+        System.out.println("********");
+        List jedis2=List.of( "Anakin", "Leia","Luke","Rey");
+        Predicate<String> isAjedi =x->x.equals("Rey");
+        jedis2.stream().filter(isAjedi);
+        jedis2.
+
     }
     public static void funcion (MyFunctionalInterface interfase){
         System.out.println("metodo con interfaz funcional como parametro");
