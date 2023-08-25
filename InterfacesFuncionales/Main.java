@@ -45,7 +45,9 @@ public class Main {
         List newjedis=List.of( "Anakin", "Leia","Luke","Rey");
         var filterJedi= newjedis.stream()
                         .filter(x->!x.equals("Rey"))
+                        .peek(System.out::println)
                         .map(z->z.toString().toUpperCase())
+                        .peek(System.out::println)
                         .findFirst();
                         //.collect(Collectors.toList());
                         System.out.println(Objects.isNull(filterJedi));
